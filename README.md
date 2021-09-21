@@ -13,4 +13,6 @@ mpicc nbody.c -o nbody -lm
 mpirun  -np {numero processi} nbody {numero bodies} {numero iterazioni} {dimensione minSize}
 Esempio:
 mpirun  -np 2 nbody 30000 10 1
+Se si usa docker:
+mpirun --mca btl_vader_single_copy_mechanism none --allow-run-as-root -np 2 --oversubscribe nbody 30000 25 1
 ```

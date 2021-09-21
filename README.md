@@ -5,3 +5,12 @@ N-body è un problema di tipo fisico che consiste nella predizione dei movimenti
 
 # :high_brightness: Descrizione
 Questo progetto è stato realizzato per l'esame "programmazione concorrente, parallela e su cloud" dell'Università degli Studi di Salerno. Per ulteriori informazioni è possibile consultare la documentazione disponibile [qui](./documentazione.pdf)
+
+# :pushpin: Quick start
+Per poter lanciare il programma sono necessari si seguenti comandi:
+```bash
+mpicc nbody.c -o nbody -lm
+mpirun  -np {numero processi} nbody {numero bodies} {numero iterazioni} {dimensione minSize}
+Esempio:
+mpirun  -np 2 nbody 30000 10 1
+```

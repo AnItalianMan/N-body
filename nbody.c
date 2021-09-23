@@ -17,7 +17,7 @@ void randomizeBodies(float *data, int n)
     int multiplier[] = {2, 1, 4, 1};
     for (int i = 0; i < n; i++)
     {
-        data[i] = 2.0f * (i / (float)50) + 1.0f * multiplier[i % 4];
+        data[i] = 2.0f * (i / 50) + 1.0f * multiplier[i % 4];
     }
 }
 
